@@ -1,4 +1,3 @@
-// CLEANED PORTFOLIO JAVASCRIPT - NO ERRORS
 console.log('Portfolio script loaded successfully!');
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -11,6 +10,7 @@ function initializePortfolio() {
     setupSmoothScrolling();
     loadProjects();
     setupContactForm();
+    
 }
 
 // Mobile Navigation
@@ -127,15 +127,47 @@ function displayProjects(container) {
     console.log('Successfully displayed ' + projects.length + ' projects!');
 }
 
-// Contact form
+
+// Skill level bars
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".skill-level").forEach(bar => {
+        const level = bar.getAttribute("data-level");
+        bar.style.width = level + "%";
+    });
+});
+
+
+
+
 function setupContactForm() {
     const contactForm = document.getElementById('contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! (Demo mode)');
-            contactForm.reset();
-        });
+
+    if (!contactForm) {
+        console.error("Contact form not found");
+        return;
     }
+
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        emailjs.sendForm(
+            "service_vlz8hpb",
+            "template_l1ea27c",
+            contactForm
+        ).then(
+            function () {
+                alert("Message sent successfully ✅");
+                contactForm.reset();
+            },
+            function (error) {
+                alert("Failed to send message ❌");
+                console.error(error);
+            }
+        );
+    });
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    setupContactForm();
+});

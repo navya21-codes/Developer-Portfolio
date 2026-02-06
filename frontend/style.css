@@ -7,7 +7,7 @@
 :root {
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
-    --accent-color: #e74c3c;
+    --accent-color: #ae9e9c;
     --text-color: #333;
     --light-bg: #f8f9fa;
     --white: #ffffff;
@@ -224,7 +224,7 @@ section {
 }
 
 .skill-bar {
-    background: #e0e0e0;
+    background: #e0e0e096;
     border-radius: 10px;
     height: 10px;
     overflow: hidden;
@@ -357,12 +357,12 @@ section {
 
 /* Global Color Scheme */
 :root {
-    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --primary-color: #667eea;
-    --secondary-color: #764ba2;
-    --accent-color: #d32a2a;
+    --primary-gradient: linear-gradient(135deg, #0871f158 0%, #e61395 100%);
+    --primary-color: #030303a7;
+    --secondary-color: #7718d6;
+    --accent-color: #19122a;
     --text-light: #ffffff;
-    --text-dark: #2c3e50;
+    --text-dark: #090c0f;
     --text-gray: #6c757d;
     --background-light: #f8f9fa;
     --card-bg: rgba(255, 255, 255, 0.95);
@@ -449,7 +449,7 @@ nav {
 
 /* About Section - Perfect Centering */
 #about {
-    background: linear-gradient(135deg, #293535 0%, #8433d4 100%);
+    background: linear-gradient(135deg, #329191 0%, #9679b3 100%);
     color: white;
     padding: 0;
     text-align: center;
@@ -519,7 +519,7 @@ body, html {
 }
 
 .skills-container h2 {
-    color: #12eb07;
+    color: #ffffff;
     font-size: 3rem;
     margin-bottom: 1rem;
     position: relative;
@@ -532,7 +532,7 @@ body, html {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 1rem;
 }
@@ -571,16 +571,79 @@ body, html {
     transform: translateY(-3px);
 }
 
+.skills-item {
+  background: #cf1111;
+  padding: 20px;
+  border-radius: 15px;
+  width: 350px;
+}
+
+.skill-bar {
+  margin: 15px 0;
+}
+
+.skill-bar span {
+  font-weight: 600;
+}
+
+.bar {
+  background: #0850e0;
+  height: 10px;
+  border-radius: 10px;
+  margin-top: 6px;
+}
+
+.fill {
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  height: 100%;
+  border-radius: 10px;
+}
+
+
+.skill-item {
+    margin-bottom: 22px;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.skill-percent {
+    color: #062be7;
+    font-weight: 600;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background: #eeebeb;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    width: 0;
+    background: #785cea;
+    border-radius: 20px;
+    transition: width 1.5s ease-in-out;
+}
+
 
 /* Projects Section*/
 #projects {
-    background: linear-gradient(135deg, #6b236b 0%, #52267e 100%);
+    background: linear-gradient(135deg, #de8ade 0%, #7c1eda 100%);
     color: white;
     padding: 50px 20px 100px 20px;
 }
 
 .projects-container h2 {
-    color: #ff6b6b !important; 
+    color: #906464 !important; 
     font-size: 3rem;
     margin-bottom: 2rem;
     text-align: center;
@@ -601,14 +664,14 @@ body, html {
 
 
 .project-card h3 {
-    color: #2c3e50 !important;
+    color: #141515 !important;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-weight: 600;
 }
 
 .project-card p {
-    color: #555 !important;
+    color: #413b3b !important;
     line-height: 1.6;
     margin-bottom: 1.5rem;
     font-size: 1rem;
@@ -622,7 +685,7 @@ body, html {
 }
 
 .tech-tag {
-    background: #076609 !important;
+    background: #0b0d0b !important;
     color: white !important;
     padding: 0.4rem 0.8rem;
     border-radius: 15px;
@@ -631,7 +694,7 @@ body, html {
 }
 
 .project-link {
-    background: #ff6b6b !important;
+    background: #4b05ef !important;
     color: white !important;
     padding: 0.8rem 1.5rem;
     border-radius: 25px;
@@ -642,7 +705,7 @@ body, html {
 }
 
 .project-link:hover {
-    background: #4607d7 !important;
+    background: #ef0437 !important;
     transform: translateY(-2px);
 }
 
@@ -660,7 +723,7 @@ body, html {
 }
 
 #contact h2 {
-    color: #f00774e5 !important;
+    color: #ffffffe5 !important;
     font-size: 3rem;
     margin-bottom: 1rem;
     text-align: center;
@@ -695,20 +758,20 @@ body, html {
 }
 
 .contact-info {
-    background: white;
+    background: rgb(255, 255, 255);
     padding: 2.5rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info h3 {
-    color: #2c3e50;
+    color: #d3dae1;
     margin-bottom: 1.5rem;
     font-size: 1.5rem;
 }
 
 .contact-info p {
-    color: #555;
+    color: #1c04f0;
     margin-bottom: 1.5rem;
     line-height: 1.6;
 }
@@ -718,7 +781,7 @@ body, html {
 }
 
 .contact-details p {
-    color: #2c3e50 !important; /* Force dark color */
+    color: #030631 !important; /* Force dark color */
     font-weight: 600;
     margin-bottom: 1rem;
     font-size: 1.1rem;
@@ -727,7 +790,7 @@ body, html {
 /* Specific fix for email and phone */
 .contact-email,
 .contact-phone {
-    color: #2c3e50 !important;
+    color: #2b07f6 !important;
     font-weight: 600;
 }
 
@@ -772,7 +835,7 @@ body, html {
 }
 
 .submit-btn {
-    background: #e10dac;
+    background: #e339b8;
     color: rgb(23, 1, 1);
     padding: 1rem 2rem;
     border: none;
