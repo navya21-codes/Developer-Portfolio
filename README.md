@@ -1,2 +1,3 @@
-# FUTURE_FS_01
-A full-stack developer portfolio showcasing my projects, skills, and contact information. 
+# Developer-Portfolio
+
+A responsive developer portfolio built with modern web technologies to showcase projects and skills.
