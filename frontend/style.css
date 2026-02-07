@@ -997,3 +997,21 @@ body, html {
 .social-link.linkedin:hover { background: #0077b5; }
 .social-link.twitter:hover { background: #1da1f2; }
 .social-link.instagram:hover { background: #e4405f; }
+
+
+/* hide menu on mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav-links.nav-active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
