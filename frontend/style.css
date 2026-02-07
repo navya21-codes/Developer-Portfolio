@@ -999,19 +999,36 @@ body, html {
 .social-link.instagram:hover { background: #e4405f; }
 
 
-/* hide menu on mobile */
+/* ===== FIX MOBILE HAMBURGER CLICK ISSUE ===== */
+
+/* Ensure navbar stays above other sections */
+nav,
+.nav-container {
+  position: relative;
+  z-index: 1000;
+}
+
+/* Ensure hamburger icon is clickable */
+.burger {
+  position: relative;
+  z-index: 1100;
+  cursor: pointer;
+}
+
+/* Mobile menu behavior */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
-    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: #ffffff;
+    z-index: 1000;
   }
 
   .nav-links.nav-active {
     display: flex;
-  }
-
-  .burger {
-    display: block;
-    cursor: pointer;
+    flex-direction: column;
   }
 }

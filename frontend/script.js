@@ -172,9 +172,13 @@ document.addEventListener("DOMContentLoaded", function () {
     setupContactForm();
 });
 
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
+document.addEventListener("DOMContentLoaded", function () {
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector(".nav-links");
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("nav-active");
+  if (burger && nav) {
+    burger.addEventListener("click", () => {
+      nav.classList.toggle("nav-active");
+    });
+  }
 });
